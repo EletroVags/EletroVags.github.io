@@ -1,51 +1,3 @@
-<!doctype html>
-<html lang="pt-PT">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Eletricista Rápido - Moita</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --accent:#0077ff;
-      --dark:#0f1724;
-      --muted:#6b7280;
-      --card:#ffffff;
-      --radius:12px;
-      font-family:'Inter', system-ui, -apple-system, "Segoe UI", Roboto;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;background:#f3f7fc;color:var(--dark);line-height:1.45}
-    .container{max-width:1000px;margin:32px auto;padding:20px;}
-
-    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:56px;height:56px;border-radius:10px;background:var(--accent);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px}
-
-    .hero{
-      background:white;padding:28px;border-radius:var(--radius);
-      box-shadow:0 6px 20px rgba(9,30,70,0.04);
-      margin-bottom:20px;
-    }
-
-    h1{margin:0;font-size:26px}
-    p.lead{color:var(--muted);margin-top:8px}
-
-    .btn{
-      display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700;
-      background:var(--accent);color:white;
-    }
-    .phone{
-      display:inline-block;margin-left:8px;background:#e8f2ff;padding:10px 16px;border-radius:10px;
-      color:var(--accent);font-weight:700;text-decoration:none;
-    }
-
-    .card{
-      background:var(--card);padding:18px;border-radius:12px;
-      box-shadow:0 4px 18px rgba(15,23,36,0.06);margin-top:20px;
-    }
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
@@ -53,100 +5,123 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Eletricista Rápido - Moita</title>
 
-<!-- Fonte moderna -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+    :root {
+        --cinza-fundo: #1f1f1f;
+        --cinza-card: #2a2a2a;
+        --texto: #f1f1f1;
+        --texto-sec: #cfcfcf;
+        --laranja: #ff8c32;
+        --laranja-hover: #ffa65a;
+    }
+
     body {
         margin: 0;
         font-family: "Inter", sans-serif;
-        background: #0d0d0d;
-        color: #f2f2f2;
+        background: var(--cinza-fundo);
+        color: var(--texto);
     }
 
     header {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        padding: 20px 40px;
-        background: #111;
-        border-bottom: 2px solid #ff7b00;
+        padding: 18px 40px;
+        background: #181818;
+        border-bottom: 2px solid var(--laranja);
     }
 
     .logo {
-        font-size: 24px;
+        font-size: 26px;
         font-weight: 700;
-        color: #ff7b00;
+        color: var(--laranja);
     }
 
     .hero {
-        padding: 60px 40px;
+        padding: 80px 20px;
         text-align: center;
-        background: linear-gradient(180deg, #1a1a1a, #0d0d0d);
+        background: linear-gradient(180deg, #1f1f1f, #262626);
     }
 
     h1 {
-        font-size: 36px;
-        margin-bottom: 10px;
-        color: #ff7b00;
+        font-size: 40px;
+        margin-bottom: 15px;
+        font-weight: 700;
+        color: var(--laranja);
     }
 
     .lead {
-        color: #cccccc;
-        font-size: 18px;
+        color: var(--texto-sec);
+        font-size: 20px;
         max-width: 700px;
         margin: 0 auto;
     }
 
+    .btn-area {
+        margin-top: 30px;
+    }
+
     .btn {
         display: inline-block;
-        margin-top: 20px;
-        padding: 14px 24px;
-        background: #ff7b00;
-        color: black;
+        padding: 14px 26px;
+        margin: 10px;
+        background: var(--laranja);
+        color: #000;
         font-weight: 700;
-        border-radius: 8px;
+        border-radius: 10px;
         text-decoration: none;
         transition: 0.2s;
     }
 
     .btn:hover {
-        background: #ff9a33;
+        background: var(--laranja-hover);
     }
 
-    .phone-btn {
-        margin-left: 12px;
-        background: #222;
-        border: 2px solid #ff7b00;
-        color: #ff7b00;
+    .btn-outline {
+        background: transparent;
+        border: 2px solid var(--laranja);
+        color: var(--laranja);
     }
 
-    .phone-btn:hover {
-        background: #ff7b00;
-        color: black;
+    .btn-outline:hover {
+        background: var(--laranja);
+        color: #000;
     }
 
     .section {
-        padding: 40px;
+        padding: 50px 20px;
         max-width: 900px;
         margin: 0 auto;
     }
 
     .card {
-        background: #111;
-        padding: 24px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-        border-left: 4px solid #ff7b00;
-        box-shadow: 0 0 10px rgba(255,127,0,0.15);
+        background: var(--cinza-card);
+        padding: 28px;
+        border-radius: 12px;
+        margin-bottom: 25px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.35);
+        border-left: 4px solid var(--laranja);
+    }
+
+    h2 {
+        margin-top: 0;
+        color: var(--laranja);
+    }
+
+    ul {
+        padding-left: 20px;
+        color: var(--texto-sec);
+        line-height: 1.7em;
     }
 
     footer {
         text-align: center;
         padding: 20px;
-        color: #888;
-        border-top: 1px solid #222;
-        margin-top: 20px;
+        color: var(--texto-sec);
+        margin-top: 30px;
+        border-top: 1px solid #333;
     }
 </style>
 
@@ -158,11 +133,13 @@
 </header>
 
 <section class="hero">
-    <h1>Eletricista Rápido na Moita</h1>
-    <p class="lead">Serviços elétricos profissionais, rápidos e seguros. Instalações, reparações, avarias urgentes, iluminação e muito mais.</p>
+    <h1>Eletricista Profissional na Moita</h1>
+    <p class="lead">Instalações, reparações, avarias, iluminação e soluções elétricas rápidas e seguras — com atendimento especializado.</p>
 
-    <a class="btn" href="mailto:ricardovagarinho1995@gmail.com?subject=Orçamento%20-%20Eletricista%20Rápido">📩 Pedir Orçamento</a>
-    <a class="btn phone-btn" href="tel:+351969451201">📞 969 451 201</a>
+    <div class="btn-area">
+        <a class="btn" href="mailto:ricardovagarinho1995@gmail.com?subject=Orçamento%20-%20Eletricista%20Rápido">📩 Pedir Orçamento</a>
+        <a class="btn btn-outline" href="tel:+351969451201">📞 969 451 201</a>
+    </div>
 </section>
 
 <div class="section">
@@ -170,16 +147,17 @@
         <h2>Serviços Disponíveis</h2>
         <ul>
             <li>Instalações elétricas completas</li>
-            <li>Reparações de tomadas e iluminação</li>
+            <li>Reparação de tomadas, interruptores e iluminação</li>
             <li>Quadros elétricos e disjuntores</li>
-            <li>Emergências elétricas 24h</li>
+            <li>Avarias e emergências elétricas</li>
             <li>Substituição de equipamentos</li>
+            <li>Instalações para obras e remodelações</li>
         </ul>
     </div>
 
     <div class="card">
         <h2>Atendimento na Moita</h2>
-        <p>Disponível para serviços em casas, apartamentos, lojas e comércio. Atendimento rápido e profissional.</p>
+        <p>Disponível para serviços em residências, apartamentos, lojas e empresas. Atendimento rápido, profissional e seguro.</p>
     </div>
 </div>
 
