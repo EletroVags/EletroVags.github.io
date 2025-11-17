@@ -126,6 +126,7 @@
         opacity: 0;
         transition: opacity 1s ease-in-out;
         border-radius: 12px;
+        cursor: pointer;
     }
 
     .gallery-nav {
@@ -147,6 +148,37 @@
     .gallery-btn:hover {
         background: var(--laranja);
         color: #000;
+    }
+
+    /* --- Lightbox --- */
+    #lightbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.8);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 999;
+    }
+
+    #lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 12px;
+        box-shadow: 0 0 20px #000;
+    }
+
+    #lightbox-close {
+        position: fixed;
+        top: 30px;
+        right: 40px;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
     }
 
     /* --- Testemunhos --- */
@@ -229,10 +261,10 @@
     <h2>Galeria de Trabalhos</h2>
 
     <div class="gallery-container">
-        <img src="https://cdn.pixabay.com/photo/2017/12/29/11/32/electrician-3042748_1280.jpg" class="gal" style="opacity:1">
-        <img src="https://cdn.pixabay.com/photo/2017/09/06/20/30/electrician-2725162_1280.jpg" class="gal">
-        <img src="https://cdn.pixabay.com/photo/2016/06/03/12/21/electric-1433531_1280.jpg" class="gal">
-        <img src="https://cdn.pixabay.com/photo/2016/03/27/19/47/switch-1285367_1280.jpg" class="gal">
+        <img src="https://cdn.pixabay.com/photo/2017/12/29/11/32/electrician-3042748_1280.jpg" class="gal" onclick="openLightbox(this.src)" style="opacity:1">
+        <img src="https://cdn.pixabay.com/photo/2017/09/06/20/30/electrician-2725162_1280.jpg" class="gal" onclick="openLightbox(this.src)">
+        <img src="https://cdn.pixabay.com/photo/2016/06/03/12/21/electric-1433531_1280.jpg" class="gal" onclick="openLightbox(this.src)">
+        <img src="https://cdn.pixabay.com/photo/2016/03/27/19/47/switch-1285367_1280.jpg" class="gal" onclick="openLightbox(this.src)">
     </div>
 
     <div class="gallery-nav">
@@ -240,6 +272,12 @@
         <button class="gallery-btn" onclick="nextImage()">▶</button>
     </div>
 </section>
+
+<!-- Lightbox -->
+<div id="lightbox">
+    <span id="lightbox-close" onclick="closeLightbox()">×</span>
+    <img id="lightbox-img" src="">
+</div>
 
 <!-- Testemunhos -->
 <section class="section">
@@ -313,6 +351,16 @@
 
     setInterval(nextImage, 4000);
 
+    /* ------- Lightbox ------- */
+    function openLightbox(src) {
+        document.getElementById("lightbox-img").src = src;
+        document.getElementById("lightbox").style.display = "flex";
+    }
+
+    function closeLightbox() {
+        document.getElementById("lightbox").style.display = "none";
+    }
+
     /* ------- Testemunhos Fade ------- */
     let testiIndex = 0;
     const testi = document.querySelectorAll(".testimonial");
@@ -337,3 +385,4 @@
 
 </body>
 </html>
+
