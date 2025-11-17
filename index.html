@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Eletricista Rápido - Moita</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --accent:#0077ff;
+      --dark:#0f1724;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --radius:12px;
+      font-family:'Inter', system-ui, -apple-system, "Segoe UI", Roboto;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:#f3f7fc;color:var(--dark);line-height:1.45}
+    .container{max-width:1000px;margin:32px auto;padding:20px;}
+
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:10px;background:var(--accent);color:white;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px}
+
+    .hero{
+      background:white;padding:28px;border-radius:var(--radius);
+      box-shadow:0 6px 20px rgba(9,30,70,0.04);
+      margin-bottom:20px;
+    }
+
+    h1{margin:0;font-size:26px}
+    p.lead{color:var(--muted);margin-top:8px}
+
+    .btn{
+      display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700;
+      background:var(--accent);color:white;
+    }
+    .phone{
+      display:inline-block;margin-left:8px;background:#e8f2ff;padding:10px 16px;border-radius:10px;
+      color:var(--accent);font-weight:700;text-decoration:none;
+    }
+
+    .card{
+      background:var(--card);padding:18px;border-radius:12px;
+      box-shadow:0 4px 18px rgba(15,23,36,0.06);margin-top:20px;
+    }
+
+    footer{text-align:center;margin-top:30px;color:var(--muted);font-size:14px}
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <header>
+      <div class="brand">
+        <div class="logo">ER</div>
+        <div>
+          <div style="font-weight:700">Eletricista Rápido</div>
+          <div style="font-size:13px;color:var(--muted)">Serviços na Moita</div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <h1>Eletricista Rápido na Moita</h1>
+      <p class="lead">Instalações, reparações, tomadas, iluminação, avarias urgentes e muito mais. Serviço rápido e profissional.</p>
+
+      <div style="margin-top:16px">
+        <a class="btn" href="mailto:ricardovagarinho1995@gmail.com?subject=Orçamento%20-%20Eletricista%20Rápido">📩 Pedir Orçamento</a>
+        <a class="phone" href="tel:+351969451201">📞 969 451 201</a>
+      </div>
+    </section>
+
+    <div class="card">
+      <h2>Serviços</h2>
+      <ul>
+        <li>Instalações elétricas completas</li>
+        <li>Reparações de tomadas e iluminação</li>
+        <li>Quadros elétricos</li>
+        <li>Emergências 24h</li>
+        <li>Substituição de disjuntores</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Atendimento na Moita e arredores</h2>
+      <p>Disponível para serviços residenciais, comerciais e urgências. Peça um orçamento sem compromisso.</p>
+    </div>
+
+    <footer>
+      © <span id="ano"></span> Eletricista Rápido – Moita
+    </footer>
+
+  </div>
+
+<script>
+  document.getElementById('ano').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
